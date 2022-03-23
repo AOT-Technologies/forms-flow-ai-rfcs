@@ -12,7 +12,7 @@ Formsflow.ai currently doesn't support multi tenancy. This as a Request For Comm
 
 ## Motivation
 
-Many customers around the world has raised the need for multi tenancy in formsflow.ai. Though the definition of multi tenancy varies by customer; I think we can cover a broad set of uses cases if we approach with a phased apprach.
+Many customers around the world has raised the need for multi tenancy in formsflow.ai. Though the definition of multi tenancy varies by customer; I think we can cover a broad set of use cases if we approach with a phased apprach.
 
 - First Phase : Eeach tenant is integrated physically, but logically separated; meaning that a single instance of formsflow will serve multiple tenants.
 - Second Phase : Multi tenancy with tenant level data and identity segragation. Data and identity stays separate for each tenant.
@@ -26,7 +26,7 @@ Security is the highest priority when it comes to multi tenancy as we need to as
 Below are the changes on a high level;
 - Admin console web : A new web application where the tenants are provisioned and managed. Tenant admin can submit tenant creation request after user signup.
 - Tenants api : A new Restful API to maintain tenant information.
-- Keycloak : All the users are managed under same realm; with authorizations under client. Client level authorization has to be implemented on keycloak. Each tenant would be mapped to a keycloak client and roles; and user roles managed under each client. Each access_token will contain Tenant-Id as a claim which will be used for tenant authorization for the user.
+- Keycloak : All the users are managed under same realm; with authorizations under client. Client level authorization has to be implemented on keycloak. Each tenant would be mapped to a keycloak client and roles; and user roles managed under each client. Each access_token will contain Tenant-Id as a claim which will be used for tenant authorization for the user. Each client would be mapped with a custom audience which each of formsflow component understands.
 - Formsflow bpm : A new tenant is created on tenant provision; and any deployments would need the tenant ID. Keycloak client roles would need to be mapped as camunda bpm groups. 
 - Formsflow Web API : Tenant identifier to mappers and add tenant based authorization. 
 - Formsflow forms : Patch tenant id in each form or use project concept in form.io.
