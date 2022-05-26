@@ -2,7 +2,7 @@
 
 | Status        | (Proposed / Accepted / Implemented / Obsolete)       |
 :-------------- |:---------------------------------------------------- |
-| **RFC PR #**     | [NNN](https://github.com/AOT-Technologies/forms-flow-ai/pull/NNN) (update when you have PR #)|
+| **RFC PR #**     | [4](https://github.com/AOT-Technologies/forms-flow-ai-rfcs/pull/4) |
 | **Author(s)** | Shibin Thomas (shibin.thomas@aot-technologies.com) |
 
 
