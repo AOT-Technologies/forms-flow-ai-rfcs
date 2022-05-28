@@ -54,9 +54,20 @@ CMIS connector from the front end is also exploring currently.
 
 ### Alternatives Considered
 
-Currently the system doesn't have a CMIS connector and it is currently saving data on a no sql db. 
-This can be a new feature and its upto the discussion weather we want the connector to contact server from the form itself or from the Java.
-My recommendation is to establish a Rest API / Listener to contact CMIS server and OpenCMIS is a really good supporting library.
+#### Alternative 1 - Upload / Download the file using cmislib
+
+The custom component for file upload in ui can be integrated with an API from python during the submission / upload.
+This api will be integrated with cmislib (Apache Checmistry python impl). The cmis client will establish a connection with the repository eg: alfresco
+and push / pull the data. The cmislib provides rich functionalities to query / view / insert the repository.
+You can view [this](https://chemistry.apache.org/python/docs/examples.html) link to learn how to configure cmislib client with webapi.
+
+The high level overview of formsflow.ai access repo using cmislib is depicted below.
+![cmislib integrated architecture](./images/cmislib%20integration.png)
+
+#### Alternative 2 - Upload / Download the file using cmislib
+
+By introducing a custom component in the UI side and accessing cms repo directly from the frontend on upload.
+Details will be updated soon.
 
 ### Performance Implications
 
