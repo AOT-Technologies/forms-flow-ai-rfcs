@@ -47,6 +47,7 @@ graph TD
 ## Challenges
 
 Maintaining 2 separate codebase comes up with some challenges including;
-- Database migration conflicts.
+- Database migration conflicts on merging open source code with premium code.
 - Increased testing effort as every release has to be tested on both versions.
+- More environments to be set up for dev and test.
 - Structuring the code to have less impact on merge/upgrades.
