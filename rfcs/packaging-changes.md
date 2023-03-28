@@ -1,8 +1,8 @@
 # Title of RFC
 
-| Status        | (Proposed / Accepted / Implemented / Obsolete)       |
-:-------------- |:---------------------------------------------------- |
-| **RFC PR #**     |  |
+| Status        | (Proposed / Accepted / Implemented / Obsolete)   |
+| :------------ | :----------------------------------------------- |
+| **RFC PR #**  |                                                  |
 | **Author(s)** | Sumesh Kaariyil (sumesh.pk@aot-technologies.com) |
 
 
@@ -20,7 +20,7 @@ Currently formsflow.ai is single github [repository](https://github.com/aot-tech
 ```mermaid
 graph TD
   S1[forms-flow-ai OSS] --> C2[Master]
-  C2 --> S2[Fork]
+  C2 --> S2[Copy]
   S2 --> S3[forms-flow-ai-ee]
   S3 --> S4[Prem. Master Branch]
   S4 --> C3[Prem. Development Branch]
